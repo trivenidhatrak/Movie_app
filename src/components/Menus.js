@@ -20,10 +20,7 @@ class Menus extends Component {
                             <li className="menu-item"><Link to={'/'}>Home</Link></li>
                             <li className="menu-item"><Link to={'/About_us'}>About_us</Link></li>
                             <li className="menu-item"><Link to={'/Login'}>Login</Link></li>
-                            <li className="menu-item"><Link to={'/Movie_details'}>Movie_details</Link></li>
-                           
-                           
-                            </ul>
+                        </ul>
                         <Switch>
                             <Route exact path='/' component={Movie_list} />
                             <Route exact path='/About_us' component={About_us} />
