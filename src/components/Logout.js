@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 
-
+import cookie from 'react-cookies'
 
 class Logout extends Component {
     
   render() {
-           this.props.history.push("/");
-        return  <h1>here</h1>
+    cookie.remove('userName')
+     this.props.history.push("/Login");
+     return window.location.reload(); 
 
    }
 }

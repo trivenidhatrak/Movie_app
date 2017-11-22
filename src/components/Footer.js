@@ -4,7 +4,7 @@ class Footer extends Component{
     return(
         <footer className="site-footer">
         <div className="container">
-            Copyright 2014 Company name, Designed by Themezy. All rights reserved
+            Copyright 2017 Company name
         </div> 
 
     </footer>

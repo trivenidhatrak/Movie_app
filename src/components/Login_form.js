@@ -4,7 +4,7 @@ import Inputtext from './Inputtext.js'
 //import validator from "validator"
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
-
+import cookie from 'react-cookies'
 class Login_form extends Component {
     
     constructor(props) {
@@ -29,6 +29,7 @@ class Login_form extends Component {
      };
      updateState(e) {
         this.setState({userName: e.target.value});
+       
      }
      handleChange(event) {
         this.setState({password: event.target.value});
@@ -45,17 +46,22 @@ class Login_form extends Component {
         {
             this.setState({PasswordMsg: ''});
             this.setState({usernameMsg: ''});
+            cookie.save('userName', this.state.userName, { path: '/' })
            // document.cookie="username=" + this.status.userName;
-           
+
            // document.cookie = this.status.userName + "=" + this.status.userName + ";" + expires ;
             this.props.history.push("/");
+            return window.location.reload(); 
             event.preventDefault();
 
         }
-       
+        
       }
    render(){
+    console.log('here')
+   
       return (
+          
         <main className="main-content">
             <div className="container">
                 <div className="page">

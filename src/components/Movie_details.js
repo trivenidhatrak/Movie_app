@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import Image from './Image.js';
+import cookie from 'react-cookies'
 
 class Movie_details extends Component {
  constructor(props) {
@@ -11,7 +12,7 @@ class Movie_details extends Component {
  }
 
 componentDidMount() {
-     
+   
     let queryString = require('query-string');
     let parsed = queryString.parse(this.props.location.search);
     let id = parsed['id'];
@@ -26,6 +27,7 @@ render(){
   return( 
 
     <main className="main-content">
+    
         <div className="container">
             <div className="page">
                 <div class="breadcrumbs">  </div>
@@ -42,7 +44,7 @@ render(){
                                 <p>{this.state.movies['overview']}</p>
                             </div>
                             <ul className="movie-meta">
-                                <li><strong>Rating:</strong> 
+                                <li><strong>Rating: </strong> 
                                     <div className="star-rating" title="Rated 4.00 out of 5"><span ><strong className="rating">{this.state.movies['vote_average']}</strong> out of 5</span></div>
                                 </li>
                                 <li><strong>Length:</strong> {this.state.movies['runtime']}</li>

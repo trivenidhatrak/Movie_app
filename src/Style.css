@@ -1725,3 +1725,7 @@ ul.arrow {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.afterLogin {
+  float: right; 
+  color:#ffaa3c;
+}

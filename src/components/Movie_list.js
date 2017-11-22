@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
-//import Inputtext from './Inputtext.js';
+import cookie from 'react-cookies'
 import MyButton from './MyButton.js';
 class Movie_list extends Component {
  constructor() {

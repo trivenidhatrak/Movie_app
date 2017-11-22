@@ -1,10 +1,11 @@
 import React,{Component} from 'react';
 import Image from './Image.js';
 //import About_us_table from './About_us_table.js';
-
+import cookie from 'react-cookies'
 class  About_us extends Component{
   
     render(){
+       
         return(<div>
             <main className="main-content">
             <div className="container">
@@ -37,6 +38,8 @@ class  About_us extends Component{
         )
     }
 
+
+    
 }
 export default About_us;
 
