@@ -35,6 +35,7 @@ componentDidMount() {
   let requestUrl = `https://api.themoviedb.org/3/movie/popular?api_key=6cbcfae44332ef3be1d59dc9361938b1`;
   axios.get(requestUrl).then(response => {
       this.setState({movie: response.data.results})
+      this.setState({movielist: response.data.results})
   });
 }
 
@@ -60,8 +61,19 @@ render(){
         <div className="filters">
           <div className="form-group col-sm-12">
             <div className="form-control col-sm-4">
+            <select value={this.state.value} onChange={this.updateState}>
               Search movie:
-                <input type="text" className="form-control" value={this.state.movieName} onChange={this.updateState} />
+              {
+                this.state.movielist.map((movies,key)=>{
+                  return(
+            
+              <option value={movies.title}>{movies.title}</option>
+              
+          
+          )
+        }) 
+      }  </select>
+                
               </div>
               <MyButton  title="Search" clickMethod={this.handleSubmit}/>
             </div>
