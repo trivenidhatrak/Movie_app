@@ -62,6 +62,7 @@ render(){
           <div className="form-group col-sm-12">
             <div className="form-control col-sm-4">
             <select value={this.state.value} onChange={this.updateState}>
+            <option >Select movie</option>
               Search movie:
               {
                 this.state.movielist.map((movies,key)=>{
