@@ -10,7 +10,7 @@ class  About_us extends Component{
             <main className="main-content">
             <div className="container">
                 <div className="page">
-                <div class="breadcrumbs">
+                <div className="breadcrumbs">
                 
                </div>
                     <div className="row">
