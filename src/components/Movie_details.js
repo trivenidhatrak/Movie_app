@@ -29,7 +29,7 @@ render(){
     
         <div className="container">
             <div className="page">
-                <div class="breadcrumbs">  </div>
+                <div className="breadcrumbs">  </div>
                 <div className="content">
                     <div className="row">
                         <div className="col-md-6">
