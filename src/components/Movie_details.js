@@ -18,8 +18,7 @@ componentDidMount() {
     let id = parsed['id'];
     let requestUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=6cbcfae44332ef3be1d59dc9361938b1`;
     axios.get(requestUrl).then(response => {
-        console.log(response.data)
-        this.setState({movies: response.data})
+         this.setState({movies: response.data})
     });
 }
 
