@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+
 import MyButton from './MyButton.js';
 class Movie_list extends Component {
  constructor() {
@@ -66,7 +67,7 @@ render(){
                 this.state.movielist.map((movies,key)=>{
                   return(
             
-              <option value={movies.title}>{movies.title}</option>
+              <option key={key} value={movies.title}>{movies.title}</option>
               
           
           )
@@ -79,11 +80,11 @@ render(){
           </div>
           <hr/>
               
-          <div classname className="movie-list">
+          <div  className="movie-list">
             {
               this.state.movie.map((movies,key)=>{
                 return(
-                  <div className="movie">
+                  <div className="movie" key={key}>
                   <div className="movie-poster">
                   <a href={`/Movie_details?id=${movies.id}`}><img src={`https://image.tmdb.org/t/p/w320${movies.poster_path}`} alt="#"/></a></div>
                   <div className="movie-title"><a href={`/Movie_details?id=${movies.id}`}>{movies.title}</a></div>
