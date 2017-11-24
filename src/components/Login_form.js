@@ -19,13 +19,7 @@ class Login_form extends Component {
         this.updateState = this.updateState.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        const required = (value) => {
-            if (!value.toString().trim().length) {
-              // We can return string or jsx as the 'error' prop for the validated Component
-              return 'require';
-            }
-          };
-          
+
      };
      updateState(e) {
         this.setState({userName: e.target.value});
